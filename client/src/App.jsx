@@ -1,19 +1,23 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import styles from "./App.module.css";
+import Analytics from "./pages/Analytics";
+import SideBar from "./components/SideBar";
+import OrderLine from "./pages/OrderLine";
+import Tables from "./pages/Tables";
 
 const App = () => {
-  const [response, setResponse] = useState("");
-  const URL = import.meta.env.VITE_BACKEND_URL;
-  const handleClick = async (e) => {
-    e.preventDefault();
-    const res = await fetch(URL);
-    const data = await res.json();
-    setResponse(data.message);
-  };
   return (
-    <div>
-      <h1>Dashboard Analytics</h1>
-      <button onClick={handleClick}>Click me to go to the server: {URL}</button>
-      <h1>{response}</h1>
+    <div className={styles.app}>
+      <div>
+        <SideBar></SideBar>
+      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Analytics />} />
+          <Route path="/tables" element={<Tables />} />
+          <Route path="/orderline" element={<OrderLine />} />
+        </Routes>
+      </Router>
     </div>
   );
 };
