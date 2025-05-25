@@ -1,0 +1,59 @@
+.orderLine {
+  padding: 20px;
+  background-color: #f9fafc;
+}
+
+.orderLine h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.orderList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.orderCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.2s ease;
+}
+
+.orderCard:hover {
+  transform: translateY(-5px);
+}
+
+.orderCard p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.orderCard strong {
+  color: #222;
+  font-size: 16px;
+}
+
+.orderCard p:last-child {
+  font-weight: 500;
+}
+
+/* Optional Status Coloring */
+.orderCard p:nth-child(5)[data-status='Processing'] {
+  color: #ff9800;
+}
+.orderCard p:nth-child(5)[data-status='Done'] {
+  color: #4caf50;
+}
+.orderCard p:nth-child(5)[data-status='Served'] {
+  color: #2196f3;
+}
+.orderCard p:nth-child(5)[data-status='Not Picked Up'] {
+  color: #f44336;
+}
