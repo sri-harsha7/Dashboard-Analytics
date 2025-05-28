@@ -4,7 +4,7 @@ import RevenueChart from "./charts/RevenueChart";
 
 const AnalyticsCard2 = () => {
   return (
-    <div className={styles.analyticsCard}>
+    <div className={styles.analyticsCard2}>
       <div className={styles.heading}>
         <div>
           <h2>Revenue</h2>

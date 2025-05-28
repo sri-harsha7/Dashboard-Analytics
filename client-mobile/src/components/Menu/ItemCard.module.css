@@ -1,0 +1,45 @@
+.itemCard{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+    flex-wrap: wrap;
+   gap: 20px;
+   
+   
+}
+.item{
+    width: 150px;
+  
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #f0f5f3;
+    cursor: pointer;
+    text-align: left;
+    
+}
+.itemCard img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  
+}
+
+
+.itemDetails{
+ font-size: 12px;
+    padding: 10px;
+    text-wrap: wrap;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:10px;
+
+   
+}
+
+.addToCart{
+    font-size: 40px;
+    cursor: pointer;
+}

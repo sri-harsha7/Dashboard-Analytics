@@ -1,59 +1,78 @@
-.orderLine {
-  padding: 20px;
-  background-color: #f9fafc;
-}
-
-.orderLine h2 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.orderList {
+.orderLine{
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color:#ffff;
+}
+.orderList{
+  display: flex;
+ align-items: center;
+ justify-content:space-between ;
+ flex-wrap: wrap;
+ gap: 30px;
+}
+.orderCard{
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 320px;
+  
+  display: flex;
+  flex-direction: column;
+
+  line-height: 10px;
+  padding-bottom: 20px ;
+ 
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #c2d4d9;
 }
 
-.orderCard {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  padding: 20px;
-  width: 250px;
-  transition: transform 0.2s ease;
+.orderInfo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background-color: #ffff;
+  padding: 5px 20px;
+
+  margin: 10px 5px;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  
 }
 
-.orderCard:hover {
-  transform: translateY(-5px);
+.orderTime{
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  padding: 0px 5px ;
+  
+ 
+ 
+}
+.orderItems{
+width: 250px;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  line-height: 20px;
+ 
+  padding: 5px 20px;
+   margin: 10px 5px;
+  background-color:#ffff;
 }
 
-.orderCard p {
-  margin: 6px 0;
-  font-size: 14px;
-  color: #555;
+.orderStatus{
+  border: 1px solid black;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 15px 30px ;
+  background-color:#9baeb3;
+  color: #3b413d;
+ 
 }
 
-.orderCard strong {
-  color: #222;
-  font-size: 16px;
-}
-
-.orderCard p:last-child {
-  font-weight: 500;
-}
-
-/* Optional Status Coloring */
-.orderCard p:nth-child(5)[data-status='Processing'] {
-  color: #ff9800;
-}
-.orderCard p:nth-child(5)[data-status='Done'] {
-  color: #4caf50;
-}
-.orderCard p:nth-child(5)[data-status='Served'] {
-  color: #2196f3;
-}
-.orderCard p:nth-child(5)[data-status='Not Picked Up'] {
-  color: #f44336;
-}
