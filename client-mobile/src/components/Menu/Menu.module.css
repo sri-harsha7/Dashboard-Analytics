@@ -1,7 +1,7 @@
 .menu{
     position: relative;
 }
-button{
+.next button{
     width: 130px;
     padding: 10px ;
     display: flex;

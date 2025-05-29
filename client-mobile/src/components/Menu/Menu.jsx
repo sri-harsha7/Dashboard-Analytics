@@ -6,10 +6,6 @@ const Menu = () => {
   return (
     <div className={styles.menu}>
       <MenuIcon></MenuIcon>
-
-      <div className={styles.next}>
-        <button>Next</button>
-      </div>
     </div>
   );
 };

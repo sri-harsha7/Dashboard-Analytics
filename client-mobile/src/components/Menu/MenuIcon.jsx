@@ -1,33 +1,17 @@
 import React from "react";
 import styles from "./MenuIcon.module.css";
-import PizzaMenu from "./PizzaMenu";
-import BurgerMenu from "./BurgerMenu";
+import { useNavigate, Outlet } from "react-router-dom";
 import { PiHamburger } from "react-icons/pi";
 import { GiFullPizza } from "react-icons/gi";
 import { RiDrinks2Line } from "react-icons/ri";
 import { GiFrenchFries } from "react-icons/gi";
 import { LuSalad } from "react-icons/lu";
-import DrinksMenu from "./DrinksMenu";
-import FriesMenu from "./FriesMenu";
-import SaladMenu from "./SaladMenu";
+
 const MenuIcon = () => {
   const [menu, setMenu] = React.useState("burger");
-  const renderMenu = () => {
-    switch (menu) {
-      case "burger":
-        return <BurgerMenu />;
-      case "pizza":
-        return <PizzaMenu />;
-      case "drinks":
-        return <DrinksMenu />;
-      case "fries":
-        return <FriesMenu />;
-      case "salad":
-        return <SaladMenu />;
-      default:
-        return <BurgerMenu />;
-    }
-  };
+
+  const navigate = useNavigate();
+
   return (
     <div>
       <div className={styles.menuIcons}>
@@ -35,7 +19,9 @@ const MenuIcon = () => {
           className={`${styles.menuIcon} ${
             menu === "burger" ? styles.active : ""
           }`}
-          onClick={() => setMenu("burger")}
+          onClick={() => {
+            navigate("/menu/burger"), setMenu("burger");
+          }}
         >
           <div style={{ fontSize: "40px", paddingTop: "10px" }}>
             <PiHamburger />
@@ -46,7 +32,9 @@ const MenuIcon = () => {
           className={`${styles.menuIcon} ${
             menu === "pizza" ? styles.active : ""
           }`}
-          onClick={() => setMenu("pizza")}
+          onClick={() => {
+            navigate("/menu/pizza"), setMenu("pizza");
+          }}
         >
           <div style={{ fontSize: "40px", paddingTop: "10px" }}>
             <GiFullPizza />
@@ -57,7 +45,9 @@ const MenuIcon = () => {
           className={`${styles.menuIcon} ${
             menu === "drinks" ? styles.active : ""
           }`}
-          onClick={() => setMenu("drinks")}
+          onClick={() => {
+            navigate("/menu/drinks"), setMenu("drinks");
+          }}
         >
           <div style={{ fontSize: "40px", paddingTop: "10px" }}>
             <RiDrinks2Line />
@@ -68,22 +58,34 @@ const MenuIcon = () => {
           className={`${styles.menuIcon} ${
             menu === "fries" ? styles.active : ""
           }`}
-          onClick={() => setMenu("fries")}
+          onClick={() => {
+            navigate("/menu/fries"), setMenu("fries");
+          }}
         >
           <div style={{ fontSize: "40px", paddingTop: "10px" }}>
             <GiFrenchFries />
           </div>
           <p>Fries</p>
         </div>
-        <div className={styles.menuIcon} onClick={() => setMenu("salad")}>
+        <div
+          className={styles.menuIcon}
+          onClick={() => {
+            navigate("/menu/salad"), setMenu("salad");
+          }}
+        >
           <div style={{ fontSize: "40px", paddingTop: "10px" }}>
             <LuSalad />
           </div>
           <p>Salad</p>
         </div>
       </div>
+      <div className={styles.menu}>
+        <Outlet />
+      </div>
 
-      {renderMenu()}
+      <div className={styles.next}>
+        <button onClick={() => navigate("/checkout")}>Next</button>
+      </div>
     </div>
   );
 };

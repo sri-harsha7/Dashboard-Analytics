@@ -35,3 +35,23 @@
     background-color: #616161;
     color: white;
 }
+.menu{
+    position: relative;
+
+}
+.next button{
+    width: 130px;
+    padding: 10px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    border-radius: 50px;
+    border: none;
+    background-color: #505050;
+    color: white;
+    
+    font-size: 20px;
+}
