@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "image": "https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/a52b70f2-01cb-42b8-ae4f-566df999115c_farmhouse_side.webp?ver=V0.0.1",
+    "name": "Margherita Pizza",
+    "price": 349.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 32
+  },
+  {
+    "id": 2,
+    "image": "https://b.zmtcdn.com/data/pictures/chains/4/2800004/0390e4e0867048d37c78aeb0bfdb6244.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+    "name": "Pepperoni Feast",
+    "price": 649.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 41
+  },
+  {
+    "id": 3,
+    "image": "https://b.zmtcdn.com/data/pictures/chains/4/2800004/ea229a45ee0a3db0ee413d6cc5ac171f.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+    "name": "Farmhouse Pizza",
+    "price": 420.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 27
+  },
+  {
+    "id": 4,
+    "image": "https://b.zmtcdn.com/data/pictures/chains/4/2800004/16838df83f24d42013f78e487e24b84f.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+    "name": "Paneer Tikka Pizza",
+    "price": 555.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 36
+  },
+  {
+    "id": 5,
+    "image": "https://b.zmtcdn.com/data/pictures/chains/4/2800004/1adb116d088669540c89150836d668f9.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+    "name": "Chicken BBQ Pizza",
+    "price": 699.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 47
+  },
+  {
+    "id": 6,
+    "image": "https://b.zmtcdn.com/data/pictures/chains/4/2800004/7a533cf7a71fadac7cb02c1ffc9c0b21.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+    "name": "Veggie Supreme",
+    "price": 399.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 30
+  },
+  {
+    "id": 7,
+    "image": "https://b.zmtcdn.com/data/dish_photos/21a/010b29da595df93d828ca0dca935821a.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Mexican Green Wave",
+    "price": 590.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 44
+  },
+  {
+    "id": 8,
+    "image": "https://b.zmtcdn.com/data/dish_photos/8a0/25fa8e24f504ffb35d3e8753fb0bf8a0.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Spicy Chicken Delight",
+    "price": 720.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 38
+  },
+  {
+    "id": 9,
+    "image": "https://b.zmtcdn.com/data/dish_photos/328/80355befb12f52c22eb75c6f865ca328.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Cheese Burst Pizza",
+    "price": 875.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 50
+  },
+  {
+    "id": 10,
+    "image": "https://b.zmtcdn.com/data/dish_photos/4db/22118134ebce9f89b2c12b95c19154db.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Mushroom Magic",
+    "price": 360.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 26
+  }
+]

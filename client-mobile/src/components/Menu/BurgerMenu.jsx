@@ -1,50 +1,27 @@
 import React from "react";
 import styles from "./BurgerMenu.module.css";
 import ItemCard from "./ItemCard";
+import { useState, useEffect } from "react";
+const URL = import.meta.env.VITE_BACKEND_URL;
 
 const BurgerMenu = () => {
-  const Items = {
-    item1: {
-      id: 1,
-      image:
-        "https://b.zmtcdn.com/data/pictures/2/19082182/9f2f843523d0e8b9ecd9ee9ee32c1c46.jpg",
-      name: "Chicken",
-      price: 200,
-      taxes: 5,
-    },
-    item2: {
-      id: 2,
-      image:
-        "https://b.zmtcdn.com/data/pictures/2/19082182/9f2f843523d0e8b9ecd9ee9ee32c1c46.jpg",
-      name: "veg Burger",
-      price: 200,
-      taxes: 5,
-    },
-    item3: {
-      id: 3,
-      image:
-        "https://b.zmtcdn.com/data/pictures/2/19082182/9f2f843523d0e8b9ecd9ee9ee32c1c46.jpg",
-      name: "Chicken Burger",
-      price: 200,
-      taxes: 5,
-    },
-    item4: {
-      id: 4,
-      image:
-        "https://b.zmtcdn.com/data/pictures/2/19082182/9f2f843523d0e8b9ecd9ee9ee32c1c46.jpg",
-      name: "Crispy Chicken",
-      price: 200,
-      taxes: 5,
-    },
-    item5: {
-      id: 5,
-      image:
-        "https://b.zmtcdn.com/data/pictures/2/19082182/9f2f843523d0e8b9ecd9ee9ee32c1c46.jpg",
-      name: "Capricciosa",
-      price: 200,
-      taxes: 5,
-    },
-  };
+  const [Items, setItems] = useState([]);
+
+  useEffect(() => {
+    const getItems = async () => {
+      try {
+        const response = await fetch(`${URL}/menu/burgermenu`);
+        const data = await response.json();
+        setItems(data);
+      } catch (err) {
+        console.error("Failed to fetch Burger menu:", err);
+      }
+    };
+
+    getItems();
+  }, []); // empty dependency array = run once after mount
+
+  console.log(Items);
 
   return (
     <div className={styles.burgerMenu}>

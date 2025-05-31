@@ -1,4 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
+import toast from "react-hot-toast";
+
+const URL = import.meta.env.VITE_BACKEND_URL;
 
 const CartContext = createContext();
 
@@ -20,11 +23,26 @@ export const CartProvider = ({ children }) => {
     setAddress(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(name, phone, address);
+    try {
+      const response = await fetch(`${URL}/users/register`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          mobile: phone,
+          address: address,
+        }),
+      });
+      const data = await response.json();
+      toast.success(data.message);
+    } catch (error) {
+      console.log(error.message);
+    }
   };
-  console.log(search);
 
   const handleAdd = (item) => {
     setCartItems((prev) => {

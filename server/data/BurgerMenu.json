@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "image": "https://b.zmtcdn.com/data/dish_photos/f2f/c5803364d0ab971b1ddb9164726a5f2f.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Cheese Overload Burger",
+    "price": 499.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 35
+  },
+  {
+    "id": 2,
+    "image": "https://b.zmtcdn.com/data/dish_photos/383/cc1d309308d3e9bbcafa9ce33fa75383.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Grilled Chicken Burger",
+    "price": 399.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 42
+  },
+  {
+    "id": 3,
+    "image": "https://b.zmtcdn.com/data/dish_photos/09d/add40710a9fb8645323351410cd5d09d.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Spicy Veg Burger",
+    "price": 250.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 29
+  },
+  {
+    "id": 4,
+    "image": "https://b.zmtcdn.com/data/dish_photos/297/1b692404ca48219ccce3a777b566d297.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Double Patty Burger",
+    "price": 599.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 44
+  },
+  {
+    "id": 5,
+    "image": "https://b.zmtcdn.com/data/dish_photos/a1d/4b85c0ecbca96904c8174090634f8a1d.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "BBQ Bacon Burger",
+    "price": 775.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 38
+  },
+  {
+    "id": 6,
+    "image": "https://b.zmtcdn.com/data/dish_photos/ac9/3bef5e979d4fe56f78db33687fcf4ac9.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Classic Veggie Burger",
+    "price": 289.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 33
+  },
+  {
+    "id": 7,
+    "image": "https://b.zmtcdn.com/data/dish_photos/1ee/08ea182e13b08360ce9f3a19db8451ee.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Paneer Tandoori Burger",
+    "price": 369.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 27
+  },
+  {
+    "id": 8,
+    "image": "https://b.zmtcdn.com/data/dish_photos/395/89fe4eea909fb6e4e3d068a608431395.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Crispy Chicken Burger",
+    "price": 420.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 46
+  },
+  {
+    "id": 9,
+    "image": "https://b.zmtcdn.com/data/dish_photos/5fd/5618b5941cda3021dc943c68ad21f5fd.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Mushroom Melt Burger",
+    "price": 310.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 31
+  },
+  {
+    "id": 10,
+    "image": "https://b.zmtcdn.com/data/dish_photos/60c/44f7ef5560ab3599ee3cdfd98f7ce60c.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "price": 665.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 40
+  }
+]

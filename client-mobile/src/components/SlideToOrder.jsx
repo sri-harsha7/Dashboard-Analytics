@@ -10,6 +10,7 @@ const SlideToOrder = ({ onSlideComplete }) => {
 
   const handleStart = (e) => {
     setIsDragging(true);
+    e.preventDefault();
   };
 
   const handleMove = (clientX) => {

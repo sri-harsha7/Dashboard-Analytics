@@ -1,4 +1,5 @@
 import React from "react";
+import { useDashboard } from "../../config/DashboardContext";
 import {
   BarChart,
   Bar,
@@ -9,23 +10,32 @@ import {
   CartesianGrid,
 } from "recharts";
 
-const data = [
-  { type: "Dine In", orders: 100 },
-  { type: "Take Away", orders: 80 },
-  { type: "Served", orders: 120 },
-];
+// const OrderBarChart = () => (
+//   <div>
+//     <BarChart width={290} height={180} data={useDashboard().chartData}>
+//       <CartesianGrid strokeDasharray="3 3" />
+//       <XAxis dataKey="type" />
+//       <YAxis />
+//       <Tooltip />
+//       <Legend />
+//       <Bar dataKey="orders" fill="#82ca9d" />
+//     </BarChart>
+//   </div>
+// );
+const OrderBarChart = () => {
+  const { chartData } = useDashboard();
 
-const OrderBarChart = () => (
-  <div>
-    <BarChart width={290} height={180} data={data}>
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="type" />
-      <YAxis />
-      <Tooltip />
-      <Legend />
-      <Bar dataKey="orders" fill="#82ca9d" />
-    </BarChart>
-  </div>
-);
-
+  return (
+    <div>
+      <BarChart width={230} height={180} data={chartData}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="type" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Bar dataKey="orders" fill="#82ca9d" />
+      </BarChart>
+    </div>
+  );
+};
 export default OrderBarChart;

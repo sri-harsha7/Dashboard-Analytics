@@ -1,39 +1,27 @@
 import React from "react";
 import ItemCard from "./ItemCard";
-
+import { useState, useEffect } from "react";
+const URL = import.meta.env.VITE_BACKEND_URL;
 const FriesMenu = () => {
-  const Items = {
-    item1: {
-      id: 1,
-      image:
-        "https://thesaltedpotato.com/wp-content/uploads/2022/04/twice-fried-fries.webp",
-      name: "Fries",
-      price: "200",
-    },
-    item2: {
-      id: 2,
-      image:
-        "https://thesaltedpotato.com/wp-content/uploads/2022/04/twice-fried-fries.webp",
-      name: "Fries",
-      price: "200",
-    },
-    item3: {
-      id: 3,
-      image:
-        "https://thesaltedpotato.com/wp-content/uploads/2022/04/twice-fried-fries.webp",
-      name: "potato fries",
-      price: "200",
-    },
-    item4: {
-      id: 4,
-      image:
-        "https://thesaltedpotato.com/wp-content/uploads/2022/04/twice-fried-fries.webp",
-      name: "Cheesy Fries",
-      price: "200",
-    },
-  };
+  const [Items, setItems] = useState([]);
+
+  useEffect(() => {
+    const getItems = async () => {
+      try {
+        const response = await fetch(`${URL}/menu/friesmenu`);
+        const data = await response.json();
+        setItems(data);
+      } catch (err) {
+        console.error("Failed to fetch Fries menu:", err);
+      }
+    };
+
+    getItems();
+  }, []);
+  console.log(Items);
   return (
     <div>
+      <h1>Fries</h1>
       <ItemCard Items={Items}></ItemCard>
     </div>
   );

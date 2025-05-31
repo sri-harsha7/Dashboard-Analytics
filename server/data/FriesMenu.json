@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "image": "https://b.zmtcdn.com/data/dish_photos/1d9/5c19d0dd804d8c347e1059c5fce381d9.jpg?output-format=webp",
+    "name": "Classic Salted Fries",
+    "price": 360.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 29
+  },
+  {
+    "id": 2,
+    "image": "https://b.zmtcdn.com/data/dish_photos/582/f79271095e3b2f53a48ee83744db5582.png?output-format=webp",
+    "name": "Peri Peri Loaded Fries",
+    "price": 475.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 37
+  }
+]

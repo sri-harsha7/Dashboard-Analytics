@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "image": "https://b.zmtcdn.com/data/dish_photos/e97/d570e71ae17b87337449fc85ea632e97.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Choclate Shake",
+    "price": 450.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 33
+  },
+  {
+    "id": 2,
+    "image": "https://b.zmtcdn.com/data/dish_photos/b9b/ccf0f73e6096f5dd7dace4c378dfab9b.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Mango Shake",
+    "price": 320.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 27
+  },
+  {
+    "id": 3,
+    "image": "https://b.zmtcdn.com/data/dish_photos/21b/0e8aa3d7ba341982236a96189e46421b.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Classic Cola",
+    "price": 100.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 30
+  },
+  {
+    "id": 4,
+    "image": "https://b.zmtcdn.com/data/dish_photos/0a8/cbec4dcffc250b0199d473ab16f850a8.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Fanta Orange",
+    "price": 20.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 30
+  },
+  {
+    "id": 5,
+    "image": "https://b.zmtcdn.com/data/dish_photos/679/3538fa0af8ca67d54958bfde0117a679.jpeg?fit=around|130:130&crop=130:130;*,*",
+    "name": "Blue Berry Mint Ice Tea",
+    "price": 610.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 41
+  },
+  {
+    "id": 6,
+    "image": "https://b.zmtcdn.com/data/dish_photos/292/89876616ab8a2d3fd5c2ee6519404292.png?fit=around|130:130&crop=130:130;*,*",
+    "name": "ced Cafe Americano",
+    "price": 715.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 46
+  }
+]

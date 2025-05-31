@@ -110,11 +110,11 @@ const ItemCard = ({ Items }) => {
 
   return (
     <div className={styles.itemCard}>
-      {Object.values(Items).map((item) => {
+      {Items.map((item) => {
         const quantity = cartItems[item.id]?.quantity || 0;
 
         return (
-          <div key={item.id} className={styles.item}>
+          <div key={item._id} className={styles.item}>
             <div className={styles.itemImage}>
               <img src={item.image} alt={item.name} />
             </div>

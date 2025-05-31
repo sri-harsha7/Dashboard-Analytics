@@ -8,8 +8,12 @@ import { PiBowlFoodBold } from "react-icons/pi";
 import { MdCurrencyRupee } from "react-icons/md";
 import { IoIdCardOutline } from "react-icons/io5";
 import { PiUsersBold } from "react-icons/pi";
+import { useDashboard } from "../config/DashboardContext";
+
+const URL = import.meta.env.VITE_BACKEND_URL;
 
 const Analytics = () => {
+  const { value } = useDashboard();
   return (
     <div className={styles.analytics}>
       <h2>Analytics</h2>
@@ -21,17 +25,17 @@ const Analytics = () => {
         ></Card>
         <Card
           icon={<MdCurrencyRupee />}
-          value={"12K"}
+          value={value?.totalRevenue}
           content={"Total Revenue"}
         ></Card>
         <Card
           icon={<IoIdCardOutline />}
-          value={"20"}
+          value={value?.ordersServed}
           content={"Total Orders"}
         ></Card>
         <Card
           icon={<PiUsersBold />}
-          value={65}
+          value={value?.numberOfClients}
           content={"Total Clients"}
         ></Card>
       </div>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "https://b.zmtcdn.com/data/pictures/chains/3/20003773/fe3257c702044d18fe9fae9dde469e58.jpeg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+    "name": "Caesar Salad",
+    "price": 345.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 32
+  },
+  {
+    "id": 2,
+    "image": "https://b.zmtcdn.com/data/pictures/chains/3/20003773/ed6777fff87932563e0ee2b0c4597376.jpeg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+    "name": "Greek Feta Salad",
+    "price": 299.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 39
+  },
+  {
+    "id": 3,
+    "image": "https://b.zmtcdn.com/data/pictures/chains/9/19366529/0f1b9a6d1ae2abbf093af8a7ebca71d3.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+    "name": "Garden Veggie Salad",
+    "price": 255.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 27
+  },
+  {
+    "id": 4,
+    "image": "https://b.zmtcdn.com/data/pictures/chains/9/18467849/ffc2a40635336fa2413a17383ec490f2.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+    "name": "Quinoa Chickpea Salad",
+    "price": 388.0,
+    "taxes": 5.0,
+    "deliveryfee": 25.0,
+    "deliverytime": 45
+  }
+]

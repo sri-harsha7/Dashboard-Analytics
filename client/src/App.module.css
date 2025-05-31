@@ -1,5 +1,7 @@
 .app{
     display: flex;
+    width: 92%;
+   
 
 }
 .sideBar{

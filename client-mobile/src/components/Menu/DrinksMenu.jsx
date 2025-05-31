@@ -1,50 +1,31 @@
 import React from "react";
 import ItemCard from "./ItemCard";
+import { useState, useEffect } from "react";
+const URL = import.meta.env.VITE_BACKEND_URL;
 
-function DrinksMenu() {
-  const Items = {
-    item1: {
-      id: 1,
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdKH5M4uTb5vafz6R2YXfF7eo3aWDx5B0cBg&s",
-      name: "Thums Up",
-      price: "200",
-    },
-    item2: {
-      id: 2,
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdKH5M4uTb5vafz6R2YXfF7eo3aWDx5B0cBg&s",
-      name: "Limca",
-      price: "200",
-    },
-    item3: {
-      id: 3,
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdKH5M4uTb5vafz6R2YXfF7eo3aWDx5B0cBg&s",
-      name: "Sprite",
-      price: "200",
-    },
-    item4: {
-      id: 4,
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdKH5M4uTb5vafz6R2YXfF7eo3aWDx5B0cBg&s",
-      name: "Pepsi",
-      price: "200",
-    },
-    item5: {
-      id: 5,
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdKH5M4uTb5vafz6R2YXfF7eo3aWDx5B0cBg&s",
-      name: "Coca Cola",
-      price: "200",
-    },
-  };
+const DrinksMenu = () => {
+  const [Items, setItems] = useState([]);
+
+  useEffect(() => {
+    const getItems = async () => {
+      try {
+        const response = await fetch(`${URL}/menu/drinksmenu`);
+        const data = await response.json();
+        setItems(data);
+      } catch (err) {
+        console.error("Failed to fetch Drinks menu:", err);
+      }
+    };
+
+    getItems();
+  }, []);
+  console.log(Items);
   return (
     <div>
       <h1>Drinks</h1>
       <ItemCard Items={Items}></ItemCard>
     </div>
   );
-}
+};
 
 export default DrinksMenu;

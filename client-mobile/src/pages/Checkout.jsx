@@ -4,6 +4,8 @@ import { useCart } from "../context/CartContext";
 import SlideToOrder from "../components/SlideToOrder";
 import toast, { Toaster } from "react-hot-toast";
 
+const URL = import.meta.env.VITE_BACKEND_URL;
+
 const Checkout = () => {
   const {
     cartItems,
@@ -26,7 +28,7 @@ const Checkout = () => {
     <div className={styles.checkout}>
       <div className={styles.cartItems}>
         {Object.values(cartItems).map((item) => (
-          <div className={styles.cartItem}>
+          <div key={item.id} className={styles.cartItem}>
             <div className={styles.itemImage}>
               <img src={item.image} alt={item.name} />
             </div>
@@ -113,7 +115,12 @@ const Checkout = () => {
         {orderType === "takeAway" && (
           <div className={styles.deliveryFee}>
             <p>Delivery Fee</p>
-            <p>50</p>
+            <p>
+              {Object.values(cartItems).reduce(
+                (total, item) => total + Number(item.deliveryfee),
+                0
+              )}
+            </p>
           </div>
         )}
         {orderType === "dineIn" && (
@@ -132,13 +139,14 @@ const Checkout = () => {
           </p>
         </div>
         <div className={styles.grandTotal}>
-          <p>Total</p>
+          <p fontWeight="bold"> Grand Total</p>
           <p>
             {Object.values(cartItems).reduce(
               (total, item) =>
                 total +
                 Number(item.price) * item.quantity +
-                Number(item.taxes) * item.quantity,
+                Number(item.taxes) * item.quantity +
+                Number(item.deliveryfee),
               0
             )}
           </p>
@@ -157,7 +165,49 @@ const Checkout = () => {
       </div>
       <div className={styles.placeOrder}>
         <SlideToOrder
-          onSlideComplete={() => toast.success("Order Placed Successfully")}
+          // onSlideComplete={() => {
+          //   toast.success("Order Placed Successfully");
+          // }}
+          onSlideComplete={async () => {
+            const orderData = {
+              items: Object.values(cartItems),
+              orderType,
+              name,
+              mobile: phone,
+              address,
+              cookingInstructions,
+              grandTotal: Object.values(cartItems).reduce(
+                (total, item) =>
+                  total +
+                  Number(item.price) * item.quantity +
+                  Number(item.taxes) * item.quantity +
+                  Number(item.deliveryfee),
+                0
+              ),
+              createdAt: new Date(),
+            };
+
+            try {
+              const response = await fetch(`${URL}/order`, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(orderData),
+              });
+
+              if (response.ok) {
+                toast.success("Order Placed Successfully");
+                console.log("Order Response:", await response.json());
+                // Optionally clear cart here
+              } else {
+                toast.error("Failed to place order");
+              }
+            } catch (error) {
+              toast.error("Server error while placing order");
+              console.error("Order error:", error);
+            }
+          }}
         />
       </div>
     </div>
