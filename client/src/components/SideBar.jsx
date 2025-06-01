@@ -4,7 +4,7 @@ import { BsGrid1X2Fill } from "react-icons/bs";
 import { MdEventSeat } from "react-icons/md";
 import { FaBook } from "react-icons/fa";
 import { SiGoogleanalytics } from "react-icons/si";
-import { href, Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SideBar = () => {
   const nav = useNavigate();
@@ -38,7 +38,7 @@ const SideBar = () => {
       <div
         className={styles.icon}
         onClick={() => {
-          window.location.href = "https://dashboard-mobile01.netlify.app/";
+          window.open("https://dashboard-mobile01.netlify.app/", "_blank");
         }}
       >
         <SiGoogleanalytics />
