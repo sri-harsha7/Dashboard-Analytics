@@ -52,7 +52,7 @@ const Order = require("../models/Order");
 
 const getAnalytics = async (req, res) => {
   try {
-    const { range } = req.query; // daily, monthly, yearly
+    const { range } = req.query;
     let startDate = new Date();
 
     if (range === "daily") {
@@ -62,7 +62,7 @@ const getAnalytics = async (req, res) => {
     } else if (range === "yearly") {
       startDate = new Date(startDate.getFullYear(), 0, 1);
     } else {
-      startDate = new Date(0); // All time
+      startDate = new Date(0);
     }
 
     const orders = await Order.find({

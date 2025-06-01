@@ -8,6 +8,7 @@ const userRoute = require("./routes/userRoute");
 const menuRoute = require("./routes/menuRoute");
 const orderRoute = require("./routes/orderRoute");
 const analyticsRoute = require("./routes/analyticsRoute");
+const tableRoute = require("./routes/tableRoute");
 
 app.use(cors());
 app.use(express.json());
@@ -24,6 +25,7 @@ app.use("/users", userRoute);
 app.use("/menu", menuRoute);
 app.use("/order", orderRoute);
 app.use("/analytics", analyticsRoute);
+app.use("/table", tableRoute);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

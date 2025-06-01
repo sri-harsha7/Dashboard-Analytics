@@ -1,13 +1,10 @@
 import React from "react";
 import styles from "./AnalyticsTable.module.css";
-
-const tableData = Array.from({ length: 30 }, (_, i) => ({
-  id: i + 1,
-  chairs: Math.floor(Math.random() * 6) + 1,
-  status: Math.random() > 0.5 ? "Available" : "Reserved",
-}));
+import { useDashboard } from "../../config/DashboardContext";
 
 const AnalyticsTable = () => {
+  const { tableData } = useDashboard();
+
   return (
     <div className={styles.tables}>
       <div className={styles.tableGrid}>

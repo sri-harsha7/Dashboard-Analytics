@@ -13,7 +13,8 @@ import { useDashboard } from "../config/DashboardContext";
 const URL = import.meta.env.VITE_BACKEND_URL;
 
 const Analytics = () => {
-  const { value } = useDashboard();
+  const { overallAnalytics } = useDashboard();
+
   return (
     <div className={styles.analytics}>
       <h2>Analytics</h2>
@@ -25,17 +26,17 @@ const Analytics = () => {
         ></Card>
         <Card
           icon={<MdCurrencyRupee />}
-          value={value?.totalRevenue}
+          value={overallAnalytics?.totalRevenue}
           content={"Total Revenue"}
         ></Card>
         <Card
           icon={<IoIdCardOutline />}
-          value={value?.ordersServed}
+          value={overallAnalytics?.ordersServed}
           content={"Total Orders"}
         ></Card>
         <Card
           icon={<PiUsersBold />}
-          value={value?.numberOfClients}
+          value={overallAnalytics?.numberOfClients}
           content={"Total Clients"}
         ></Card>
       </div>
