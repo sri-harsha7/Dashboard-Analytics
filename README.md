@@ -43,9 +43,9 @@ Insert gif or link to demo
 For server
 https://dashboard-analytics-wxvk.onrender.com
 
-for Client 
+for Client : https://dashboard012.netlify.app/
 
-for Client Mobile
+for Client Mobile : https://dashboard-mobile01.netlify.app/
 
 ## Used Packages
 
