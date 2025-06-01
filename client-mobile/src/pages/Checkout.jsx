@@ -3,6 +3,7 @@ import styles from "./Checkout.module.css";
 import { useCart } from "../context/CartContext";
 import SlideToOrder from "../components/SlideToOrder";
 import toast, { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -19,40 +20,49 @@ const Checkout = () => {
   } = useCart();
   const [orderType, setOrderType] = React.useState("dineIn");
   const [instructions, setInstructions] = React.useState(false);
+  const navigate = useNavigate();
   const handleInstructions = () => {
     setInstructions(!instructions);
   };
-
   console.log(cartItems);
+
   return (
     <div className={styles.checkout}>
-      <div className={styles.cartItems}>
-        {Object.values(cartItems).map((item) => (
-          <div key={item.id} className={styles.cartItem}>
-            <div className={styles.itemImage}>
-              <img src={item.image} alt={item.name} />
-            </div>
-            <div className={styles.itemDetails}>
-              <div className={styles.itemInfo}>
-                <h2>{item.name}</h2>
-                <p>{item.price}</p>
+      {Object.keys(cartItems).length ? (
+        <div className={styles.cartItems}>
+          {Object.values(cartItems).map((item) => (
+            <div key={item.id} className={styles.cartItem}>
+              <div className={styles.itemImage}>
+                <img src={item.image} alt={item.name} />
               </div>
+              <div className={styles.itemDetails}>
+                <div className={styles.itemInfo}>
+                  <h2>{item.name}</h2>
+                  <p>{item.price}</p>
+                </div>
 
-              <div className={styles.addToCart}>
-                {item.quantity > 0 ? (
-                  <div className={styles.counter}>
-                    <button onClick={() => handleRemove(item.id)}>-</button>
-                    <span>{item.quantity}</span>
+                <div className={styles.addToCart}>
+                  {item.quantity > 0 ? (
+                    <div className={styles.counter}>
+                      <button onClick={() => handleRemove(item.id)}>-</button>
+                      <span>{item.quantity}</span>
+                      <button onClick={() => handleAdd(item)}>+</button>
+                    </div>
+                  ) : (
                     <button onClick={() => handleAdd(item)}>+</button>
-                  </div>
-                ) : (
-                  <button onClick={() => handleAdd(item)}>+</button>
-                )}
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <div className={styles.emptyCart}>
+          <h1>Cart is Empty</h1>
+          <p onClick={() => navigate("/menu")}>Add Items to your Cart</p>
+        </div>
+      )}
+
       <div className={styles.instructions} onClick={handleInstructions}>
         <p>Add Cooking Instructions (Optional)</p>
       </div>
